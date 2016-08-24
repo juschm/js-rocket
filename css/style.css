@@ -1,3 +1,17 @@
 body{
 	background-color: green;
 }
+
+.cool{
+	visibility: hidden;
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+	transition: background-color 1s;
+}
+
+.cool.grey{
+	visibility: visible;
+	/*display: block;*/
+	background-color: grey;
+}
