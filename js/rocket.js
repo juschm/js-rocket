@@ -15,6 +15,18 @@ var changeState = function(state){
 			countdownNumber = countdownNumber-1;
 			document.getElementById('countdown').innerHTML = countdownNumber;
 			
+			if (countdownNumber > 3 && countdownNumber <= 6){
+			/*	document.getElementById('excited').className = 'excited show';
+			} else {
+				document.getElementById('excited').className = 'excited';*/
+			}
+
+			if (countdownNumber == 3){
+				document.getElementById('thereYet').className = 'thereYet show';
+			} else {
+				document.getElementById('excited').className = 'thereYet';
+			}
+
 			if (countdownNumber <= 0){
 				
 				changeState(3);

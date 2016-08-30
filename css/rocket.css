@@ -1,5 +1,5 @@
 .left{
-	background-color: #a2add0;
+	background-color: #ffffff;
 	position: fixed;
 	width: 50%;
 	height: 100%;
@@ -8,7 +8,7 @@
 }
 
 .right{
-	background-color: #f0f8ff;
+	background-color: #a2add0;
 	position: fixed;
 	width: 50%;
 	height: 100%;
@@ -17,7 +17,7 @@
 }
 
 .ground{
-	background-color: grey;
+	background: url('../img/ground.png') no-repeat center center;
 	position: absolute;
 	bottom: 0;
 	left:0;
@@ -25,19 +25,65 @@
 	height: 20px;
 }
 
+.excited{
+	position: absolute;
+	bottom: 220px;
+	left: 50%;
+	background: url('../img/oooh.png') no-repeat 0 0;
+	width: 100px;
+	height: 79px;
+	margin-left: -180px;
+	display: none;
+}
+
+.thereYet{
+	position: absolute;
+	bottom: 220px;
+	left: 70%;
+	background: url('../img/thereYet.png') no-repeat 0 0;
+	width: 100px;
+	height: 60px;
+	display: none;
+}
+
+.thereYet.show{
+	display: block;
+}
+
+.excited.show{
+	display: block;
+}
+
 .rocket{
 	position: absolute;
 	left: 50%;
-	bottom: 20px;
-	width: 20px;
-	height: 100px;
-	background-color: #5d8aa8;
+	bottom: -28px;
+	width: 117px;
+	height: 248px;
+	margin-left: -58.5px;
+	background: url('../img/rocketState1.png') no-repeat 0 0;
 	transition: bottom 10000ms;
+}
+
+/*rocket background image*/
+
+body.body-state2 .rocket{
+	background-image: url('../img/rocketState2.png')
+}
+
+body.body-state3 .rocket,
+body.body-state4 .rocket{
+	background-image: url('../img/rocketState3.png')
+}
+
+body.body-state5 .rocket{
+	background-image: url('../img/rocketState5.png')
 }
 
 body.body-state1 .rocket{
 	transition: none;
 }
+
 
 body.body-state3 .rocket,
 body.body-state4 .rocket{
