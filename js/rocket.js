@@ -2,33 +2,31 @@ var timer = null;
 
 var countdownNumber = 10;
 
-var changeState = function(state){
+var changeState = function (state) {
 	document.body.className = 'body-state'+state;
 	clearInterval(timer);
 	countdownNumber = 10;
 	document.getElementById('countdown').innerHTML = countdownNumber;
 
-
-
 	if (state == 2){				// countdown
-		timer = setInterval(function(){
+
+		timer = setInterval(function () {
 			countdownNumber = countdownNumber-1;
 			document.getElementById('countdown').innerHTML = countdownNumber;
 			
-			if (countdownNumber > 3 && countdownNumber <= 6){
-			/*	document.getElementById('excited').className = 'excited show';
+			if (countdownNumber > 4 && countdownNumber <= 7){
+				document.getElementById('excited').className = 'excited show';
 			} else {
-				document.getElementById('excited').className = 'excited';*/
+				document.getElementById('excited').className = 'excited';
 			}
 
-			if (countdownNumber == 3){
+			if (countdownNumber > 1 && countdownNumber <= 4){
 				document.getElementById('thereYet').className = 'thereYet show';
 			} else {
-				document.getElementById('excited').className = 'thereYet';
+				document.getElementById('thereYet').className = 'thereYet';
 			}
 
 			if (countdownNumber <= 0){
-				
 				changeState(3);
 			};
 		},500);
@@ -38,7 +36,7 @@ var changeState = function(state){
 		{
 			var randomNumber = Math.round(Math.random()*10);
 
-			console.log('randomNumber: ', randomNumber);
+			console.log('randomNumber: ', randomNumber)
 
 			if (randomNumber > 5) {	//success
 				changeState(4);

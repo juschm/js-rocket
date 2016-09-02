@@ -1,3 +1,25 @@
+body{font-family: 'helvetica', 'arial', sans-serif}
+
+.interface{
+	text-align: center;
+	padding: 20px;
+}
+
+a.button{
+	display: inline-block;
+	background-color: lightgrey;
+	color: #000011;
+	padding: 10px 40px;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-radius: 3px;
+	transition: color 300ms;
+}
+
+a:hover{
+	color: darkgreen;
+}
+
 .left{
 	background-color: #ffffff;
 	position: fixed;
@@ -36,6 +58,11 @@
 	display: none;
 }
 
+.excited.show{
+	display: block;
+}
+
+
 .thereYet{
 	position: absolute;
 	bottom: 220px;
@@ -50,9 +77,6 @@
 	display: block;
 }
 
-.excited.show{
-	display: block;
-}
 
 .rocket{
 	position: absolute;
@@ -120,9 +144,5 @@ body.body-state5 .state5{
 
 
 .a{
-	
-}
-
-a.button{
 	
 }
